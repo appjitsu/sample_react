@@ -7,7 +7,8 @@
     "url": "git@github.com:appjitsu/concourse_test.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --progress --colors"
+    "start": "webpack-dev-server --progress --colors --inline",
+    "build": "webpack -p"
   },
   "author": "Jason Cochran",
   "license": "ISC",
@@ -32,8 +33,11 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "jquery": "^3.1.0",
     "react": "15.0.1",
     "react-bootstrap": "^0.29.5",
-    "react-dom": "15.0.1"
+    "react-dom": "15.0.1",
+    "react-router": "^2.5.2",
+    "react-router-bootstrap": "^0.23.0"
   }
 }

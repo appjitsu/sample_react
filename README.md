@@ -1,4 +1,4 @@
-# concourse_test
+# React Test
 
 ```bash
 ### Install deps
@@ -7,4 +7,4 @@ npm install
 ### run dev server
 npm start
 ```
-Then go to: http://localhost:8080/webpack-dev-server/
+Then go to: http://localhost:8080/

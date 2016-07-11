@@ -1,11 +1,17 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import WebNav from './WebNav.jsx';
 
 export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Button className="btn-primary">Click me!</Button>
+        <WebNav/>
+
+        <div className="container">
+          <div className="row">
+            {this.props.children}
+          </div>
+        </div>
       </div>
     );
   }
