@@ -1,17 +1,25 @@
 {
   "name": "concourse_test",
   "version": "1.0.1",
-  "description": "React Test",
+  "description": "React Test App",
   "repository": {
     "type": "git",
     "url": "git@github.com:appjitsu/concourse_test.git"
   },
+  "homepage": "https://github.com/appjitsu/concourse_test",
+  "author": "Jason Cochran (www.jasonleecochran.com)",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "express",
+    "webpack",
+    "es2015",
+    "javascript"
+  ],
   "scripts": {
     "start": "node ./app.js",
     "build": "webpack -p --progress --colors --config webpack.prod.config.js"
   },
-  "author": "Jason Cochran",
-  "license": "ISC",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.10.1",
