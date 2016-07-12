@@ -10,7 +10,7 @@ const config = {
     text: 'Stock Price'
   },
   series: [{
-    name: 'Stock',
+    name: 'Price',
     data: data,
     tooltip: {
       valueDecimals: 2
