@@ -1,14 +1,14 @@
 {
   "name": "concourse_test",
-  "version": "1.0.0",
-  "description": "Concourse Test App",
+  "version": "1.0.1",
+  "description": "React Test",
   "repository": {
     "type": "git",
     "url": "git@github.com:appjitsu/concourse_test.git"
   },
   "scripts": {
     "start": "webpack-dev-server --progress --colors --inline",
-    "build": "webpack -p"
+    "build": "webpack -p --progress --config webpack.production.config.js"
   },
   "author": "Jason Cochran",
   "license": "ISC",

@@ -8,6 +8,6 @@ npm install
 npm start
 
 ### build for production
-npm build
+npm run build
 ```
 Then go to: http://localhost:8080/

@@ -2,6 +2,7 @@ import React from 'react';
 import Highcharts from 'react-highcharts/dist/ReactHighstock';
 import data from '../../data/stock.json';
 
+// highcharts config
 const config = {
   rangeSelector: {
     selected: 1
@@ -11,7 +12,7 @@ const config = {
   },
   series: [{
     name: 'Price',
-    data: data,
+    data: data, // load the sample data
     tooltip: {
       valueDecimals: 2
     }

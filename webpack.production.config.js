@@ -5,6 +5,7 @@ var ProductionMode = new webpack.DefinePlugin({
   }
 });
 var Uglify = new webpack.optimize.UglifyJsPlugin({
+  minimize: true,
   compress:{
     warnings: true
   }
@@ -22,7 +23,7 @@ var HTMLify = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'cheap-module-source-map',
   entry: [
     './app/index.js'
   ],
@@ -79,6 +80,9 @@ module.exports = {
     ]
   },
   plugins: [
+    Uglify,
+    Agro,
+    ProductionMode,
     HTMLify
   ]
 };
