@@ -27,10 +27,15 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
       {
         test: /.jsx?$/,
-        loader: 'babel-loader',
+        loader: 'babel',
+        include: path.join(__dirname, 'src'),
         exclude: /node_modules/,
         query: {
           presets: ['es2015', 'react']

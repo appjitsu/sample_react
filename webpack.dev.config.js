@@ -18,13 +18,31 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
       {
-        test: /.jsx?$/,
-        loader: 'babel-loader',
+        test: /\.js$/,
+        loader: 'babel',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.jsx?$/,
+        loader: 'babel',
+        include: path.join(__dirname, 'src') }
         exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react']
+          "stage": 0,
+          "plugins": ["react-transform:after"],
+          "extra": {
+            "react-transform": {
+              "transforms": [{
+                "transform": "react-transform-hmr",
+                "imports": ["react"],
+                "locals": ["module"]
+              }, {
+                "transform": "react-transform-catch-errors",
+                "imports": ["react", "redbox-react"]
+              }]
+            }
+          }
         }
       },
       {
