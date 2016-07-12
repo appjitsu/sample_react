@@ -36,10 +36,7 @@ module.exports = {
         test: /.jsx?$/,
         loader: 'babel',
         include: path.join(__dirname, 'src'),
-        exclude: /node_modules/,
-        query: {
-          presets: ['es2015', 'react']
-        }
+        exclude: /node_modules/
       },
       {
         test: /\.json$/,
