@@ -7,8 +7,8 @@
     "url": "git@github.com:appjitsu/concourse_test.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --inline",
-    "build": "webpack -p --progress --config webpack.production.config.js"
+    "start": "node ./app.js",
+    "build": "webpack -p --progress --colors --config webpack.prod.config.js"
   },
   "author": "Jason Cochran",
   "license": "ISC",
@@ -30,7 +30,9 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.12.1"
   },
   "dependencies": {
     "bootstrap": "^3.3.6",

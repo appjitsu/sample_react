@@ -1,36 +1,21 @@
-var webpack = require('webpack');
-var ProductionMode = new webpack.DefinePlugin({
-  'process.env': {
-    'NODE_ENV': JSON.stringify('production')
-  }
-});
-var Uglify = new webpack.optimize.UglifyJsPlugin({
-  minimize: true,
-  compress:{
-    warnings: true
-  }
-});
-var Agro = new webpack.optimize.AggressiveMergingPlugin({
-  minSizeReduce: 1.5,
-  moveToParents: true
-});
-
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var HTMLify = new HtmlWebpackPlugin({
-  template: __dirname + '/app/index.html',
-  filename: 'index.html',
-  inject: 'body'
-});
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  devtool: 'cheap-module-source-map',
+  devtool: 'eval',
   entry: [
-    './app/index.js'
+    'webpack-hot-middleware/client',
+    './src/index'
   ],
   output: {
-    path: __dirname + '/dist',
-    filename: "index_bundle.js"
+    path: path.join(__dirname, 'public'),
+    filename: 'bundle.js',
+    publicPath: '/public/'
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
@@ -78,11 +63,5 @@ module.exports = {
         loader: 'url?limit=10000&mimetype=image/svg+xml'
       }
     ]
-  },
-  plugins: [
-    Uglify,
-    Agro,
-    ProductionMode,
-    HTMLify
-  ]
+  }
 };
