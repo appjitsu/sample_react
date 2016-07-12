@@ -1,7 +1,7 @@
 {
   "name": "concourse_test",
   "version": "1.0.1",
-  "description": "React Test App",
+  "description": "React Sample",
   "repository": {
     "type": "git",
     "url": "git@github.com:appjitsu/concourse_test.git"

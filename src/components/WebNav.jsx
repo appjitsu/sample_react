@@ -9,7 +9,7 @@ export default class WebNav extends React.Component {
       <Navbar inverse>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link className="navbar-brand" to="/">React Test</Link>
+            <Link className="navbar-brand" to="/">React Sample</Link>
           </Navbar.Brand>
           <Navbar.Toggle/>
         </Navbar.Header>

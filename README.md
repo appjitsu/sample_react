@@ -1,4 +1,4 @@
-# React Test
+# React Sample
 
 ## Demo
 
