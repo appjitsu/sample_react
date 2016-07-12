@@ -22,7 +22,7 @@ export default class Test1 extends React.Component {
   render() {
     return (
       <div className="col-lg-12 text-center">
-        <h1>Test1 - HightCharts Example</h1>
+        <h1>Test1 - Highcharts Example</h1>
         <Highcharts config = {config}></Highcharts>
       </div>
     );
